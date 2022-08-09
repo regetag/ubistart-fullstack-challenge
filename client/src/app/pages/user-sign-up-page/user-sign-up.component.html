@@ -1,3 +1,24 @@
-<form>
-  <button onclick="submitSignUp()">Cadastrar</button>
+<form [formGroup]="validationForm" (ngSubmit)="onSubmit()">
+  <input 
+    id="emailInput"
+    name="email"
+
+    type="email"
+    placeholder="Email"
+
+    formControlName="email"
+    [disabled]="submited"
+  >
+
+  <input 
+    id="confirmEmailInput"
+    name="confirmEmail"
+
+    type="email"
+    placeholder="Confirme seu email"
+
+    formControlName="confirmEmail"
+    [disabled]="submited"
+  >
+  <button>Cadastrar</button>
 </form>

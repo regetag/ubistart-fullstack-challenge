@@ -16,6 +16,7 @@ class ValidationService{
 
     if (error === "required") return "Campo obrigatório.";
     if (error === "email") return "Email inválido.";
+    if (error === "equalsTo") return "Os campos devem ser iguais.";
 
     throw new Error(`Você deve criar uma rota para o erro:${error}`)
   }

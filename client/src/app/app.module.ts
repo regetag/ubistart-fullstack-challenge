@@ -8,6 +8,8 @@ import { UserSignUpComponent } from './pages/user-sign-up-page/user-sign-up.comp
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ValidationService } from './services/validation.service';
+import { CustomValidators } from './services/customValidators.service';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { ValidationService } from './services/validation.service';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ValidationService],
+  providers: [
+    ValidationService,
+    CustomValidators
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
