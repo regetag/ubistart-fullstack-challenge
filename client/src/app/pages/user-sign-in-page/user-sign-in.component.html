@@ -29,7 +29,7 @@
     type="password"
     placeholder="Password"
   >
-  <section class="error_section" *ngIf="email?.touched && !validationService.isInputValid(password)">
+  <section class="error_section" *ngIf="password?.touched && !validationService.isInputValid(password)">
     <p>
       {{ validationService.getErrorMessage(password) }}
     </p>
