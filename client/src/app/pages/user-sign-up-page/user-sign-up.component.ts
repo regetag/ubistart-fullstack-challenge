@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm, FormControl } from '@angular/forms';
 
 @Component({
@@ -6,15 +6,12 @@ import { NgForm, FormControl } from '@angular/forms';
   templateUrl: './user-sign-up.component.html',
   styleUrls: ['./user-sign-up.component.sass']
 })
-export class UserSignUpComponent implements OnInit {
+export class UserSignUpComponent {
 
   forms: FormControl
 
   constructor() {
     this.forms = new FormControl()
-  }
-
-  ngOnInit(): void {
   }
 
   onSubmit(e: NgForm):void {

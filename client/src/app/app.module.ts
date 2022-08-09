@@ -3,24 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserSignInComponent } from './user-sign-in/user-sign-in.component';
-import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
-import { FormInputComponent } from './form-input/form-input.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserSignInComponent } from './pages/user-sign-in-page/user-sign-in.component';
+import { UserSignUpComponent } from './pages/user-sign-up-page/user-sign-up.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ValidationService } from './services/validation.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserSignInComponent,
     UserSignUpComponent,
-    FormInputComponent,
     LandingPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ValidationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

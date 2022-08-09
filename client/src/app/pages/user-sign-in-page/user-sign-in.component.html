@@ -1,0 +1,44 @@
+
+<form [formGroup]="validationForm" (ngSubmit)="onSubmit()" >
+
+  <label for="emailInput">Email</label>
+  <input 
+    id="emailInput"
+    name="email"
+
+    formControlName="email"
+    [disabled]="submited"
+
+    type="email"
+    placeholder="Email"
+  >
+  <section class="error_section" *ngIf="email?.touched && !validationService.isInputValid(email)">
+    <p>
+      {{ validationService.getErrorMessage(email) }}
+    </p>
+  </section>
+    
+  <label for="passwordInput">Senha</label>
+  <input 
+    id="passwordInput"
+    name="password"
+
+    formControlName="password"
+    [disabled]="submited"
+
+    type="password"
+    placeholder="Password"
+  >
+  <section class="error_section" *ngIf="email?.touched && !validationService.isInputValid(password)">
+    <p>
+      {{ validationService.getErrorMessage(password) }}
+    </p>
+  </section>
+
+  <!-- [disabled]="submited || !loginForm.form.valid"  -->
+  <button 
+    type="submit" 
+  >
+    Entrar
+  </button>
+</form>
