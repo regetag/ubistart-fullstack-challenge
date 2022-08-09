@@ -1,4 +1,19 @@
 <form action="">
-  <input type="email" placeholder="Email">
-  <input type="password" placeholder="Password">
+  <input 
+    type="email" 
+    name="email"
+    [(ngModel)]="emailInput"
+    placeholder="Email"
+    #name="ngModel"
+    required
+  >
+    
+  <!-- <input
+    type="password" 
+    name="password"
+    placeholder="Senha"
+    required
+  > -->
+
+  <button>Entrar</button>
 </form>

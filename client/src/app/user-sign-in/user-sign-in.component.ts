@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSignInComponent implements OnInit {
 
+  emailInput: string;
+
   constructor() { }
 
   ngOnInit(): void {
