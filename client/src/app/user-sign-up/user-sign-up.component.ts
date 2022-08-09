@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-user-sign-up',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSignUpComponent implements OnInit {
 
-  constructor() { }
+  forms: FormControl
+
+  constructor() {
+    this.forms = new FormControl()
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(e: NgForm):void {
+    alert("Enviado!!!!")
   }
 
 }
