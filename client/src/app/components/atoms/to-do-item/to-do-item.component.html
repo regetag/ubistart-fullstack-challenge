@@ -1,0 +1,17 @@
+<li>
+  <section> <!-- Information Section -->
+    <h5>{{ displayTitle }}</h5> <!-- Title -->
+    <p>{{ displayDescription }}</p> <!-- Description -->
+    <div class="date_infos"> <!-- Display flex -->
+      <small>Criado em: <span>{{ displayCreatedAt }}</span></small> <!-- Dia de encerramento formato: dd/mm/yy -->
+      <div *ngIf="rawData.completedAt" >
+        <small>Completo em: {{displayCompletedAt}}</small>
+      </div> 
+      <small>320343 dias restantes</small> <!-- Dia de encerramento formato: dd:hh restantes -->
+    </div>
+  </section>
+  <section> <!-- Functional section -->
+    <button>Atualizar</button>
+    <button>Remover</button>
+  </section>
+</li>

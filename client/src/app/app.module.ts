@@ -9,6 +9,9 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { ValidationService } from './services/validation.service';
 import { CustomValidators } from './services/customValidators.service';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { ToDoItemComponent } from './components/atoms/to-do-item/to-do-item.component';
+
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { CustomValidators } from './services/customValidators.service';
     AppComponent,
     UserSignInComponent,
     UserSignUpComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    DashboardPageComponent,
+    ToDoItemComponent
   ],
   imports: [
     BrowserModule,
