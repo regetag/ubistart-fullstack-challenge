@@ -1,3 +1,14 @@
 version: '3.9'
 
-# todo
+
+services:
+  postgres:
+    image: postgres:14.4
+    ports:
+      - 3691:5432
+    environment:
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_USER=todo
+      - POSTGRES_DB=todo
+    # volumes:
+    #   - ./querys:/docker-entrypoint-initdb.d:ro
