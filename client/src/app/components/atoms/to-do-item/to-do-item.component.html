@@ -1,17 +1,24 @@
-<li>
-  <section> <!-- Information Section -->
-    <h5>{{ displayTitle }}</h5> <!-- Title -->
-    <p>{{ displayDescription }}</p> <!-- Description -->
-    <div class="date_infos"> <!-- Display flex -->
-      <small>Criado em: <span>{{ displayCreatedAt }}</span></small> <!-- Dia de encerramento formato: dd/mm/yy -->
-      <div *ngIf="rawData.completedAt" >
-        <small>Completo em: {{displayCompletedAt}}</small>
-      </div> 
-      <small>320343 dias restantes</small> <!-- Dia de encerramento formato: dd:hh restantes -->
+<section>
+  <h3>{{ displayTitle }}</h3>
+  <p>{{ displayDescription }}</p>
+  <div class="date_infos">
+    <small>Criado em: <span>{{ displayCreatedAt }}</span></small>
+    <div *ngIf="rawData.completedAt">
+      <small>Completo em: {{ displayCompletedAt }}</small>
     </div>
-  </section>
-  <section> <!-- Functional section -->
-    <button>Atualizar</button>
-    <button>Remover</button>
-  </section>
-</li>
+    <div *ngIf="!rawData.completedAt" >
+      <small>Prazo limite: {{displayDeadlineAt}}</small>
+    </div>
+  </div>
+</section>
+<section>
+  <input 
+    type="checkbox" 
+    name="completed"
+    [checked]="!!rawData.completedAt"
+    (click)="toggleCompletion()"
+  >
+</section>
+<section>
+  <button>...</button>
+</section>

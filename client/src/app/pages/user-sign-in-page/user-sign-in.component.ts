@@ -5,7 +5,8 @@
   @Component({
     selector: 'app-user-sign-in',
     templateUrl: './user-sign-in.component.html',
-    styleUrls: ['./user-sign-in.component.sass']
+    styleUrls: ['./user-sign-in.component.sass'],
+    providers: [ValidationService]
   })
   export class UserSignInComponent {
     constructor(

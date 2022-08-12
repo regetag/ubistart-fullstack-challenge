@@ -7,8 +7,6 @@ import { UserSignInComponent } from './pages/user-sign-in-page/user-sign-in.comp
 import { UserSignUpComponent } from './pages/user-sign-up-page/user-sign-up.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ValidationService } from './services/validation.service';
-import { CustomValidators } from './services/customValidators.service';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { ToDoItemComponent } from './components/atoms/to-do-item/to-do-item.component';
 
@@ -27,10 +25,6 @@ import { ToDoItemComponent } from './components/atoms/to-do-item/to-do-item.comp
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
-  ],
-  providers: [
-    ValidationService,
-    CustomValidators
   ],
   bootstrap: [AppComponent]
 })

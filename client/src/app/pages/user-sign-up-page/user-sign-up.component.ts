@@ -6,32 +6,19 @@ import { ValidationService } from "../../services/validation.service"
 @Component({
   selector: 'app-user-sign-up',
   templateUrl: './user-sign-up.component.html',
-  styleUrls: ['./user-sign-up.component.sass']
+  styleUrls: ['./user-sign-up.component.sass'],
+  providers: [
+    ValidationService,
+    CustomValidators
+  ]
 })
 export class UserSignUpComponent implements OnInit {
   constructor(
-    public validationService: ValidationService,
     private formBuilder: FormBuilder,
+    public validationService: ValidationService,
     private customValidators: CustomValidators
   ) {
     this.submited = false;
-
-    // this.validationForm = new FormGroup({
-    //   email: new FormControl(null, {
-    //     validators: [
-    //       Validators.required,
-    //       Validators.email
-    //     ]
-    //   }),
-      // confirmEmail: new FormControl(null, {
-      //   validators: [
-      //     Validators.required,
-      //     equalsToValidator("email", "confirmEmail")
-      //   ]
-      // }),
-      // password: new FormControl(null, {}),
-      // passwordEmail: new FormControl(null, {})
-    // })
   }
 
 

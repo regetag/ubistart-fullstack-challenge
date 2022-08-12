@@ -1,5 +1,42 @@
+<section>
+    <button (click)="toggleModal(true)">
+        Criar novo item
+    </button>
+    <button>Sair</button>
+</section>
+
 <ul>
-  
-    <app-to-do-item *ngFor="let data of itemList" [rawData]="data">
-    </app-to-do-item>
+    <li *ngFor="let data of itemList">
+        <app-to-do-item 
+            [rawData]="data"
+            [ngClass]="isModalOpened ? 'overflow_disabled' : ''"
+        ></app-to-do-item>
+    </li>
 </ul>
+
+
+<div *ngIf="isModalOpened" class="create_todo_modal">
+    <form>
+        <section class="input_sect">
+            <div>
+                <small>Titulo</small>
+                <input type="text">
+            </div>
+            <div>
+                <small>Descrição</small>
+                <textarea></textarea>
+            </div>
+            <div>
+                <small>Prazo de entrega</small>
+                <input type="datetime-local">
+            </div>
+        </section>
+
+        <section class="button_sect">
+            <button (click)="toggleModal(false)" type="button">Cancelar</button>
+            <button type="submit">
+                {{ isModalCreating ? "Criar" : "Salvar" }}
+            </button>
+        </section>
+    </form>
+</div>
