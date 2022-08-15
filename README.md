@@ -1,12 +1,3 @@
-Diario:
-Dia 1: 
-Estou conhecendo a estrutura do Angular e identificando os pontos em comum com o react. Decidi que irei adotar a kebab-case para a estrutura de pastas.
-Fiz três paginas para a aplicação até o momento: landing, signin e signup, junto a um componente de input.
-
-Dia 2:
-Para validar os campos, o angular possui duas formas: "Template driven forms" ou "Reactive forms". Vou optar pelo "Reactive forms".
-Descartei o componente de input, já que ele iria adicionar uma complexidade desnecessaria, e sacrificando o DRY.
-
 # Desafio para fullstack
 
 Bem-vindo ao desafio técnico para fullstack  da Ubistart!! :raised_hands:

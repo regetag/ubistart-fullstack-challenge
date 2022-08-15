@@ -10,5 +10,3 @@ services:
       - POSTGRES_PASSWORD=123
       - POSTGRES_USER=todo
       - POSTGRES_DB=todo
-    # volumes:
-    #   - ./querys:/docker-entrypoint-initdb.d:ro
